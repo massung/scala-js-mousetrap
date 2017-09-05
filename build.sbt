@@ -9,7 +9,7 @@ scalaVersion := "2.12.3"
 
 // libraries
 libraryDependencies ++= Seq(
-  "org.scala-js" %%% "scalajs-dom" % "0.9.1"
+  "org.scala-js" %%% "scalajs-dom" % "0.9.2"
 )
 
 // javascript sources
