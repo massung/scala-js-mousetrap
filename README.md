@@ -13,7 +13,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 **Step 2.** Add this repo as a dependency:
 
 ```scala
-libraryDependencies += "blog.codeninja" % "scala-js-mosuetrap" % "1.6.1"
+libraryDependencies += "blog.codeninja" % "scala-js-mousetrap" % "1.6.1"
 ```
 
 If you'd like the latest-and-greatest version, use "master-SNAPSHOT".
