@@ -13,8 +13,10 @@ object Mousetrap extends js.Object {
   type KeyHandler = js.Function3[Char, js.Array[Modifier], dom.Event, _]
   
   // Bind a key or series of keys to a function.
-  def bind(key: String, command: Command, eventType: js.UndefOr[EventType]): Unit = js.native
-  def bind(keySeq: js.Array[String], command: Command, eventType: js.UndefOr[EventType]): Unit = js.native
+  def bind(key: String, command: Command): Unit = js.native
+  def bind(keySeq: js.Array[String], command: Command): Unit = js.native
+  def bind(key: String, command: Command, eventType: EventType): Unit = js.native
+  def bind(keySeq: js.Array[String], command: Command, eventType: EventType): Unit = js.native
 
   // Unbind a key or sequence of keys to a command.
   def unbind(key: String): Unit = js.native
@@ -54,3 +56,5 @@ case object ShiftMod extends Modifier("shift")
 case object ControlMod extends Modifier("control")
 case object AltMod extends Modifier("alt")
 case object MetaMod extends Modifier("meta")
+case object OptionMod extends Modifier("option")
+case object CommandMod extends Modifier("command")

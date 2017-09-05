@@ -24,11 +24,12 @@ Perform a simple HTTP get, wait for it, and print the response.
 
 ```scala
 import scala.scalajs.js
+import org.scalajs.dom
 import blog.codeninja.scalajs.mousetrap._
 
 object Example {
     def main(args: Array[String]) = {
-        Mousetrap.bind("space", (e: Event) => println("Hello, world!"), js.undefined)
+        Mousetrap.bind("alt+k", (e: dom.Event) => println("Hello, world!"))
     }
 }
 ```
