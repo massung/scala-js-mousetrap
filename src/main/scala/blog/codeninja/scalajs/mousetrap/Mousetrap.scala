@@ -2,6 +2,7 @@ package blog.codeninja.scalajs.mousetrap
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 import org.scalajs.dom
 
@@ -13,14 +14,10 @@ object Mousetrap extends js.Object {
   type KeyHandler = js.Function3[Char, js.Array[Modifier], dom.Event, _]
   
   // Bind a key or series of keys to a function.
-  def bind(key: String, command: Command): Unit = js.native
-  def bind(keySeq: js.Array[String], command: Command): Unit = js.native
-  def bind(key: String, command: Command, eventType: EventType): Unit = js.native
-  def bind(keySeq: js.Array[String], command: Command, eventType: EventType): Unit = js.native
+  def bind(key: |[String, js.Array[String]], command: Command, eventType: EventType = null): Unit = js.native
 
   // Unbind a key or sequence of keys to a command.
-  def unbind(key: String): Unit = js.native
-  def unbind(keySeq: js.Array[String]): Unit = js.native
+  def unbind(key: |[String, js.Array[String]]): Unit = js.native
 
   // Trigger whatever command is bound to a key.
   def trigger(key: String): Unit = js.native
